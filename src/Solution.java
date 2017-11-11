@@ -70,14 +70,14 @@ public class Solution {
     }
 
     private static boolean checkPalindrome(long number) {
-        String num = String.valueOf(number);
+        long reverse = 0;
+        long n = number;
 
-        for (int i = 0; i < num.length()/2; i++) {
-            if (num.charAt(i) != num.charAt(num.length()-1-i)) {
-                return false;
-            }
+        while (n>0) {
+            reverse = reverse*10 + n%10;
+            n /= 10;
         }
 
-        return true;
+        return number == reverse;
     }
 }
