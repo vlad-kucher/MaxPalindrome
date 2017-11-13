@@ -4,8 +4,7 @@ import java.util.List;
 public class Solution {
 
     public static void main(String[] args) {
-        List<Integer> primes = getFiveDigitPrimes();
-        findMaxPalindrome(primes);
+        findMaxPalindrome(getFiveDigitPrimes());
     }
 
     private static List<Integer> getFiveDigitPrimes(){
